@@ -1,0 +1,480 @@
+<HTML>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+
+            }
+            body
+            {
+                background-image: url('dark-pattern-design-wallpaper-1366x768_46.jpeg');
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+
+            }
+            .container {
+                position: relative;
+                width: 100%;
+                margin: 50px;
+                max-width: 1000px;
+                min-height: 1000px;
+                background: #fff;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                box-shadow: 0 35px 55px rgba(0,0, 0,0.1);
+            }
+            .container .left_side
+            {
+
+                position: relative;
+                background: #2ecc71;
+                padding: 40px;
+
+
+            }
+            .profile_text
+            {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+
+
+            }
+            .profile_text .imgbx
+            {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                overflow: hidden;
+            } 
+            .profile_text .imgbx img
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .profile_text h2
+            {
+                color: #fff;
+                font-size: 1.5em;
+                margin-top: 20px;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 600;
+                line-height: 1.4em;
+
+            }
+            .profile_text h2 span
+            {                 
+                font-size: 0.8em;
+                font-weight: 300;
+
+            }
+            .contactinfo 
+            {
+                padding-top: 40px;
+
+            }
+            .title
+            {
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+
+                
+            }
+            .contactinfo ul
+            {
+                position: relative;
+
+            }
+            .contactinfo ul li
+            {
+                position: relative;
+                list-style: none;
+                margin: 10px 0;
+                cursor: pointer;
+
+
+            }
+            .contactinfo ul li .icon
+            {
+                display: inline-block;
+                width: 30px;
+                font-size: 18px;
+                color: greenyellow;
+
+            }
+            .contactinfo ul li span
+            {
+                color: #fff;
+                font-weight: 300;
+            }
+            .contactinfo.education li
+            {
+                margin-bottom: 15px;
+                
+            }
+            .contactinfo.education h5
+            {
+                color: greenyellow;
+                font-weight: 500;
+            }
+            .contactinfo.education h4
+            {
+                color: #fff;
+                font-weight: 500;
+
+            }
+            .contactinfo.language .percent
+            {
+                position: relative;
+                width: 100%;
+                height: 6px;
+                background: yellow;
+                display: block;
+                margin-top: 5px;
+            }
+            .contactinfo.language .percent div
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: yellow; 
+            }
+
+            .container .right_side
+            {
+
+                position: relative;
+                background: #fff;
+                padding: 40px;
+                
+            }
+            .about
+            {
+                margin-bottom: 50px;
+
+            }
+            .about.last-child
+            {
+                margin-bottom: 0;
+            }
+            .title2
+            {
+                color: #003100;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 10px;
+
+            }
+            p
+            {
+                color: #333;
+
+            }
+            .about .box
+            {
+                display: flex;
+                flex-direction: row;
+                height: 90px;
+
+            }
+            .about .box .year_company
+            {
+                min-width: 150px;
+    
+
+            }
+            .about .box .year_company h5
+            {
+                text-transform: uppercase;
+                color: #848c90;
+                margin-bottom: 5px;
+                font-weight: 600;
+
+            }
+            .about .box .text h4
+            {
+                text-transform: uppercase;
+                color: lightgreen;
+                font-size: 16px;
+
+            }
+            .skills .box
+            {
+                position: relative;
+                width: 100%;
+                height: 60px;
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                justify-content: center;
+                align-items: center;
+
+            }
+            .skills .box h4
+            {
+                text-transform: uppercase;
+                color: #848c99;
+                font-weight: 500;
+
+            }
+            .skills .box .percent
+            {
+                position: relative;
+                width: 100%;
+                height: 10px;
+                background: #f0f0f0;
+            }
+            .skills .box .percent div
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: lightgreen;
+            }
+            .intrests ul
+            {
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                
+
+            }
+            .intrests ul li
+            {
+                list-style: none;
+                color: black;
+                font-weight: 500;
+                margin: 10px 0;
+            }
+            .intrests ul li .fa  
+            {
+                color: lightgreen;
+                font-size: 18px;
+                width: 20px;
+            }
+            @media(max-width: 1000px)
+            {
+                .container
+                {
+                    margin: 10px;
+                    grid-template-columns: repeat(1,1fr);
+                }
+                .intrests ul 
+                {
+                    grid-template-columns: repeat(2,1fr);
+                }
+            }
+            @media(max-width: 600px)
+            {
+                .about .box
+                {
+                    flex-direction: column;
+
+                }
+                .about .box ,.year_company
+                {
+                    margin-bottom: 5px;
+                }
+                .intrests ul 
+                {
+                    grid-template-columns: repeat(1,1fr);
+                }
+                .skills .box
+                {
+                    grid-template-columns: repeat(1,1fr);
+                }
+
+            }
+            </style>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "left_side">
+            <div class = "profile_text">
+                <div class = "imgbx">
+                    <img src = "IMG-20220724-WA0031.jpg">
+                </div>
+                <h2>PRANAV PRASAD<br><span> Web Developer</h2>
+                    <div class="contactinfo">
+                        <h3 class = "title">Contact Information</h3>
+                        <ul>
+                            <li>
+                                <span class = "icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                                <span class = "text" onclick="window.location.href = 'https://link-to-tel.herokuapp.com/tel/%2B91%209999623867'">+91 9999623867</span>
+                            </li>
+                            <li>
+                                <span class = "icon" onclick="window.location.href = 'mailto:pranav2577@gmail.com';">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            
+                                </span>
+                                <span class = "text" onclick="window.location.href = 'mailto:pranav2577@gmail.com';" >pranav2577@gmail.com</span>
+                            </li>
+                              <li>      <span class = "icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                                    <span class = "text" onclick="window.location.href = 'https://www.linkedin.com/in/pranav-prasad-1a7555253/;'">Linkedin</span>
+
+
+                                </li>
+                                <li>
+                                    <span class = "icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                                    <span class = "text" onclick="window.location.href = 'https://github.com/xyronias1;'">GitHub</span>
+
+                                </li>
+                                <li>
+                                    <span class = "icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                                    <span class = "text">Delhi, New Delhi, India</span>
+                                      
+                                </li>
+                            
+                        </ul>
+                    </div>
+                        <div class="contactinfo education">
+                            <h3 class = "title">Education</h3>
+                            <ul>
+                                <li>
+                                    <h5>2021-2024 </h5>
+                                    <h4>Bachelor Degree in Computer Science</h4>
+                                    <h4>Sri Guru Tegh Bhadur Khalsa College </h4>
+                                    <h4>Delhi University </h4>
+                                </li>
+                                <li>
+                                    <h5>2009-2019 </h5>
+                                    <h4>Intermediate</h4>
+                                    <h4>Ryan International School, NOIDA</h4>
+                                    <h4>CBSE board</h4>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="contactinfo language">
+                            <h3 class = "title">Languages</h3>
+                            <ul>
+                                <li>
+                                    <span class = "text">English</span>
+                                    <span class = "percent">
+                                    <div style = "width: 100%;">
+                                    </div></span>
+                                </li>
+                                <li>
+                                    <span class = "text">French</span>
+                                    <span class = "percent">
+                                    <div style = "width: 60%;">
+                                    </div></span>
+                                </li>
+                                <li>
+                                    <span class = "text">Hindi</span>
+                                    <span class = "percent" >
+                                    <div style = "width: 100%;">
+                                    </div></span>
+                                </li>
+                            </ul>
+                        </div>
+            </div>
+            </div>
+
+
+            <div class = "right_side">
+                <div class = "about">
+                    <h2 class = "Title2">PROFILE</h2>
+                    <p>I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+
+                    </p>
+                    
+                </div>
+                <div class = "about">
+                    <h2 class="title2">Experience</h2>
+                    <div class = "box">
+                        <div class = "year_company">
+                            <h5>2016-2018</h5>
+                            <h5>xyronias</h5>
+                        </div>
+                        <div class = "text">
+                            <h4>Video Editor</h4>
+                            <p>Video editor and organiser for the YouTube channel xyronias which has a total 50k views </p>
+                        </div>
+                    </div>
+                    <div class = "box">
+                        <div class = "year_company">
+                            <h5>2018-2021</h5>
+                            <h5>r/ksi</h5>
+                        </div>
+                        <div class = "text">
+                            <h4>Moderator</h4>
+                            <p>Moderator for the r/ksi discord server. Manage and overview all the events and people who have joined.</p>
+                        </div>
+                    </div>
+                    <div class = "box">
+                        <div class = "year_company">
+                            <h5>2021-2022</h5>
+                            <h5>Comapny</h5>
+                        </div>
+                        <div class = "text">
+                            <h4>Unemployed</h4>
+                            <p>Unemployed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class = "about skills">
+                    <h2 class = "title2">Professional Skills</h2>
+                    <div class = "box">
+                        <h4>HTML</h4>
+                        <div class = "percent">
+                        <div style = "width: 70%;"></div></div>
+                    </div>
+                    <div class = "box">
+                        <h4>C++</h4>
+                        <div class = "percent">
+                        <div style = "width: 75%;"></div></div>
+                    </div>
+                    <div class = "box">
+                        <h4>Javascript</h4> 
+                        <div class = "percent">
+                        <div style = "width: 60%;"></div></div>
+                    </div>
+                    <div class = "box">
+                        <h4>Premier Pro</h4>
+                        <div class = "percent">
+                        <div style = "width: 80%;"></div></div>
+                    </div>
+                    <div class = "box">
+                        <h4>Java</h4>
+                        <div class = "percent">
+                        <div style = "width: 60%;"></div></div>
+                    </div>
+                    <div class = "box">
+                        <h4>Photoshop</h4>
+                        <div class = "percent">
+                        <div style = "width: 70;"></div></div>
+                    </div>
+                </div>
+            
+            <div class="about intrests">
+            <h2 class = "title2">intrests</h2>
+            <ul>
+                <li><i class="fa fa-gamepad" aria-hidden="true"></i>Gaming</li>
+                <li><i class="fa fa-futbol-o" aria-hidden="true"></i>Football</li>
+                <li><i class="fa fa-music" aria-hidden="true"></i>Hip-Hop</li>
+                <li><i class="fa fa-film" aria-hidden="true"></i>Movies</li>
+            </ul>
+            </div>
+            </div>
+        </div>
+    </body>
+</HTML> 
